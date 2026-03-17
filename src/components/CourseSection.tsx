@@ -33,15 +33,16 @@ const COURSES: Course[] = [
   {
     id: '3',
     code: 'CME 106',
-    title: 'Lecture Note 03',
-    subtitle: 'Quantum Computing',
+    title: '2nd Complementary of binary number Understanding',
+    subtitle: 'Introduction to Digital Circuits',
     topics: [
+      'A deeper look into binary representation and modular arithmetic'
   
     ],
-    illustration: 'https://raw.githubusercontent.com/afshinea/stanford-cme-106-probability-and-statistics-for-engineers/master/en/cheatsheet-probability-and-statistics.png',
-    category: 'Quantum Computing',
-    folderUrl: 'https://github.com/afshinea/stanford-cme-106-probability-and-statistics-for-engineers',
-    webUrl: 'https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-probability-and-statistics'
+    illustration: 'https://www.electrical4u.com/images/february16/1455995997.gif',
+    category: 'Introduction to Digital Circuits',
+    folderUrl: 'https://github.com/haryhoang/myPortfolio/blob/main/Pdf/2nd%20Complementary%2C%20binary%20number.pdf',
+    webUrl: ''
   }
 ];
 
