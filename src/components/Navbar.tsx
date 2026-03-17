@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
         {/* Container cho logo mới */}
         <div className="bg-white/90 p-1 rounded-sm flex items-center justify-center"> 
           <img 
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7pkeQLxaPKZrL0Naua8g4Wk1Y1fbOMJ6Ymw&s" // T
+            src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/458524088_2326614281007597_5202808658000640079_n.png?stp=dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=53a332&_nc_ohc=mHYqmS--oxYQ7kNvwHLQb2p&_nc_oc=AdnYVJqGer0UoAn0ZRG1MZmdZsMulaZ1s2c-G1b5k9UyINYnpKEfAYh0Wm_b-H1ej0z0JqqTQfFjnkz2P2uz7qU3&_nc_zt=23&_nc_ht=scontent.fsgn16-1.fna&_nc_gid=c8jK5kEBQy13l40RLAO3LQ&_nc_ss=8&oh=00_AfxpRbokJeI4oK9JROS6MOKLR7IBcJYJXgOp8bTCsVudNg&oe=69BF3AB2" 
             alt="Computer Engineering Logo" 
             className="w-8 h-8 object-contain" // Điều chỉnh kích thước (w-8 h-8) để logo vuông hiển thị cân đối
           
