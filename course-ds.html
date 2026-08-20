@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT002: Data Structures & Algorithms - Lecture Notes - Harry Hoang</title>
+    <meta name="description" content="Lecture notes, concept explorations, and study guides for IT002 Data Structures & Algorithms and Computer Engineering topics." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['Merriweather', 'Georgia', 'serif'],
+              sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #FFFFFF;
+        color: #111827;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+    
+    <!-- ========================================================================= -->
+    <!-- TOP NAVIGATION BAR (Left-aligned: Home | Writing | Work & Projects)       -->
+    <!-- ========================================================================= -->
+    <header class="w-full max-w-4xl mx-auto px-6 sm:px-8 pt-8 sm:pt-12 pb-6">
+      <nav class="flex items-center space-x-6 sm:space-x-8 text-[15px] font-sans">
+        <a id="nav-home" href="index.html" class="text-gray-600 hover:text-gray-950 transition-colors pb-0.5">Home</a>
+        <!-- Active Tab (Writing) -->
+        <a id="nav-writing" href="writing.html" class="font-medium text-gray-950 border-b-2 border-gray-950 pb-0.5 transition-colors">Writing</a>
+        <a id="nav-projects" href="projects.html" class="text-gray-600 hover:text-gray-950 transition-colors pb-0.5">Work & Projects</a>
+      </nav>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- MAIN CONTENT AREA                                                         -->
+    <!-- ========================================================================= -->
+    <main class="flex-1 w-full max-w-4xl mx-auto px-6 sm:px-8 py-6 sm:py-8">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="flex items-center space-x-2 text-xs sm:text-sm font-sans text-gray-500 mb-3">
+        <a href="writing.html" class="hover:text-gray-950 transition-colors">Writing</a>
+        <span>/</span>
+        <span class="text-gray-900 font-medium">IT002: Data Structures & Algorithms</span>
+      </nav>
+
+      <!-- Main Course Title -->
+      <h1 class="font-serif text-3xl sm:text-4xl font-bold text-gray-950 tracking-tight mb-2">
+        IT002: Data Structures & Algorithms
+      </h1>
+      <p class="text-gray-600 text-sm sm:text-[15px] mb-10">
+        Lecture notes, diagrams, and theoretical intuition articles.
+      </p>
+
+      <!-- ========================================================================= -->
+      <!-- 2-COLUMN GRID OF LECTURE NOTE CARDS (WITH PDF THUMBNAIL EMBEDS)           -->
+      <!-- ========================================================================= -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+        
+        <!-- ===================================================================== -->
+        <!-- Card 1: The "Ambiguous" Flip-Flop between Theory and Intuition        -->
+        <!-- ===================================================================== -->
+        <article class="group flex flex-col">
+          <a href="lecture-detail.html" class="block">
+            <!-- Dynamic PDF / Graphic Thumbnail Container (aspect-video) -->
+            <div class="overflow-hidden aspect-video relative rounded-sm border border-gray-200 bg-gray-50 mb-3 group-hover:border-gray-400 transition-colors shadow-xs">
+              <iframe 
+                src="assets/pdf/flip-flop.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0" 
+                class="w-full h-full object-cover pointer-events-none"
+                title="Flip-Flop PDF Preview Thumbnail"
+              ></iframe>
+            </div>
+            <!-- Card Title -->
+            <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 mt-1 leading-snug group-hover:text-blue-600 transition-colors">
+              The “Ambiguous” Flip-Flop between the Theory and Intuition
+            </h2>
+          </a>
+          <!-- Description & Metadata -->
+          <p class="text-gray-600 text-[15px] sm:text-[15.5px] leading-relaxed mt-2">
+            Some problems we may have met when study FF and explained.
+          </p>
+          <div class="text-gray-500 text-sm font-sans mt-2.5">
+            explained • 2026
+          </div>
+        </article>
+
+        <!-- ===================================================================== -->
+        <!-- Card 2: Why Computers Use Two's Complement for Subtraction            -->
+        <!-- ===================================================================== -->
+        <article class="group flex flex-col">
+          <a href="lecture-detail.html" class="block">
+            <!-- Dynamic PDF / Graphic Thumbnail Container (aspect-video) -->
+            <div class="overflow-hidden aspect-video relative rounded-sm border border-gray-200 bg-gray-50 mb-3 group-hover:border-gray-400 transition-colors shadow-xs">
+              <iframe 
+                src="assets/pdf/twos-complement.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0" 
+                class="w-full h-full object-cover pointer-events-none"
+                title="Two's Complement PDF Preview Thumbnail"
+              ></iframe>
+            </div>
+            <!-- Card Title -->
+            <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 mt-1 leading-snug group-hover:text-blue-600 transition-colors">
+              Why Computers Use Two’s Complement for Subtraction | Minus number:
+            </h2>
+          </a>
+          <!-- Description & Metadata -->
+          <p class="text-gray-600 text-[15px] sm:text-[15.5px] leading-relaxed mt-2">
+            A deeper look into binary representation and modular arithmetic.
+          </p>
+          <div class="text-gray-500 text-sm font-sans mt-2.5">
+            explained • 2026
+          </div>
+        </article>
+
+        <!-- ===================================================================== -->
+        <!-- Card 3: Lecture 2 Data Structures (MIT OCW)                           -->
+        <!-- ===================================================================== -->
+        <article class="group flex flex-col">
+          <a href="lecture-detail.html" class="block">
+            <!-- Dynamic PDF 1st Page Thumbnail Container (aspect-video) -->
+            <div class="overflow-hidden aspect-video relative rounded-sm border border-gray-200 bg-gray-50 mb-3 group-hover:border-gray-400 transition-colors shadow-xs">
+              <iframe 
+                src="assets/pdf/lecture02.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0" 
+                class="w-full h-full object-cover pointer-events-none"
+                title="Lecture 2 PDF Preview Thumbnail"
+              ></iframe>
+            </div>
+            <!-- Card Title -->
+            <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 mt-1 leading-snug group-hover:text-blue-600 transition-colors">
+              Lecture 2: Data Structures (MIT 6.006 Course Notes)
+            </h2>
+          </a>
+          <!-- Description & Metadata -->
+          <p class="text-gray-600 text-[15px] sm:text-[15.5px] leading-relaxed mt-2">
+            Comprehensive study note detailing data structure interfaces, sequence operations, asymptotic bounds, and memory allocations.
+          </p>
+          <div class="text-gray-500 text-sm font-sans mt-2.5">
+            lecture notes • 2026
+          </div>
+        </article>
+
+        <!-- ===================================================================== -->
+        <!-- Card 4: RISC-V Pipeline Hazards & Forwarding                          -->
+        <!-- ===================================================================== -->
+        <article class="group flex flex-col">
+          <a href="lecture-detail.html" class="block">
+            <!-- Dynamic PDF 1st Page Thumbnail Container (aspect-video) -->
+            <div class="overflow-hidden aspect-video relative rounded-sm border border-gray-200 bg-gray-50 mb-3 group-hover:border-gray-400 transition-colors shadow-xs">
+              <iframe 
+                src="assets/pdf/riscv.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0" 
+                class="w-full h-full object-cover pointer-events-none"
+                title="RISC-V PDF Preview Thumbnail"
+              ></iframe>
+            </div>
+            <!-- Card Title -->
+            <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 mt-1 leading-snug group-hover:text-blue-600 transition-colors">
+              RISC-V 5-Stage Pipeline Hazards and Forwarding Paths
+            </h2>
+          </a>
+          <!-- Description & Metadata -->
+          <p class="text-gray-600 text-[15px] sm:text-[15.5px] leading-relaxed mt-2">
+            Demystifying data dependencies, load-use stalls, and branch penalty resolutions in modern CPU microarchitecture.
+          </p>
+          <div class="text-gray-500 text-sm font-sans mt-2.5">
+            explained • 2026
+          </div>
+        </article>
+
+        <!-- ===================================================================== -->
+        <!-- TO ADD A NEW LECTURE CARD: COPY THIS BLOCK AND UPDATE DETAILS         -->
+        <!-- ===================================================================== -->
+        <!--
+        <article class="group flex flex-col">
+          <a href="lecture-detail.html" class="block">
+            <div class="overflow-hidden aspect-video relative rounded-sm border border-gray-200 bg-gray-50 mb-3 group-hover:border-gray-400 transition-colors shadow-xs">
+              <iframe 
+                src="assets/pdf/YOUR_PDF_FILENAME.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0" 
+                class="w-full h-full object-cover pointer-events-none"
+                title="PDF Preview Thumbnail"
+              ></iframe>
+            </div>
+            <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 mt-1 leading-snug group-hover:text-blue-600 transition-colors">
+              YOUR LECTURE TITLE HERE
+            </h2>
+          </a>
+          <p class="text-gray-600 text-[15px] sm:text-[15.5px] leading-relaxed mt-2">
+            Brief summary of the concepts covered in this note or lecture.
+          </p>
+          <div class="text-gray-500 text-sm font-sans mt-2.5">
+            lecture notes • 2026
+          </div>
+        </article>
+        -->
+
+      </div>
+
+      <!-- Bottom Navigation Back Link -->
+      <div class="mt-14 pt-6 border-t border-gray-100">
+        <a href="writing.html" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+          ← Back to all courses and subjects
+        </a>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 sm:px-8 py-10 mt-16 text-xs text-gray-500 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div>
+        © 2026 Harry Hoang • University of Information Technology (UIT)
+      </div>
+      <div class="flex items-center space-x-5">
+        <a href="index.html" class="hover:text-gray-900 transition-colors">Home</a>
+        <a href="writing.html" class="hover:text-gray-900 transition-colors">Writing</a>
+        <a href="projects.html" class="hover:text-gray-900 transition-colors">Work & Projects</a>
+      </div>
+    </footer>
+
+  </body>
+</html>

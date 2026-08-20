@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Hoang - Personal Academic Portfolio</title>
+    <meta name="description" content="Computer Engineering student at UIT researching Deep Learning Hardware Acceleration, RISC-V, and Post-Quantum Cryptography." />
+    
+    <!-- Google Fonts: Serif (Merriweather/Georgia) for Headings, Sans (Inter) for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['Merriweather', 'Georgia', 'serif'],
+              sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #FFFFFF;
+        color: #111827;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+    
+    <!-- ========================================================================= -->
+    <!-- TOP NAVIGATION BAR (Left-aligned: Home | Writing | Work & Projects)       -->
+    <!-- TO ADD A NEW NAV TAB: Copy one of the <a> tags below and update href/label -->
+    <!-- ========================================================================= -->
+    <header class="w-full max-w-4xl mx-auto px-6 sm:px-8 pt-8 sm:pt-12 pb-6">
+      <nav class="flex items-center space-x-6 sm:space-x-8 text-[15px] font-sans">
+        <!-- Active Tab (Home) -->
+        <a id="nav-home" href="index.html" class="font-medium text-gray-950 border-b-2 border-gray-950 pb-0.5 transition-colors">Home</a>
+        <!-- Writing Tab -->
+        <a id="nav-writing" href="writing.html" class="text-gray-600 hover:text-gray-950 transition-colors pb-0.5">Writing</a>
+        <!-- Work & Projects Tab -->
+        <a id="nav-projects" href="projects.html" class="text-gray-600 hover:text-gray-950 transition-colors pb-0.5">Work & Projects</a>
+      </nav>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- MAIN CONTENT AREA                                                         -->
+    <!-- ========================================================================= -->
+    <main class="flex-1 w-full max-w-4xl mx-auto px-6 sm:px-8 py-6 sm:py-8">
+      
+      <!-- Headline Title: Matches reference screenshot scale -->
+      <h1 class="font-serif font-extrabold text-3xl sm:text-4xl text-gray-900 tracking-tight mb-8">
+        Harry Hoang
+      </h1>
+
+      <!-- Bio Section -->
+      <section class="space-y-6 text-[17px] sm:text-[18px] text-gray-800 leading-[1.7] max-w-3xl">
+        <p>
+          I study Computer Engineering at the University of Information Technology (UIT).
+        </p>
+
+        <p>
+          <strong class="font-semibold text-gray-950">Research:</strong> Deep learning hardware acceleration (focusing on BitNet 1.58b), RISC-V architecture, and Post-quantum cryptography.
+        </p>
+
+        <p>
+          <strong class="font-semibold text-gray-950">Writing:</strong> Personal notes and reflections on my learning journey. I mostly share what I discover when bridging the gap between theory and intuition in computer engineering, mathematics, and AI.
+        </p>
+      </section>
+
+      <!-- Awards Section -->
+      <section class="mt-12 pt-4 max-w-3xl">
+        <h2 class="text-[17px] sm:text-[18px] font-bold text-gray-950 mb-4 font-sans">
+          Previously, I have been honored with several awards:
+        </h2>
+        <ul class="list-disc list-outside ml-6 space-y-2.5 text-[16px] sm:text-[17px] text-gray-800 leading-relaxed">
+          <li>
+            Consolation Prize (Top 5 Finalist) – SPARK IT UP UIT Innovation Contest 2025
+          </li>
+          <li>
+            Academic Merit Scholarship (Excellent Category)
+          </li>
+        </ul>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- SAY HI! CONTACT SECTION (Exact match with reference image)                -->
+      <!-- ========================================================================= -->
+      <section class="mt-14 max-w-3xl">
+        <!-- Header with spanning horizontal line -->
+        <div class="flex items-center gap-4 mb-6">
+          <h2 class="text-[17px] font-bold text-gray-950 tracking-tight whitespace-nowrap">
+            Say Hi!
+          </h2>
+          <div class="h-[1px] bg-gray-200 flex-1"></div>
+        </div>
+
+        <!-- 2-Column Links Grid -->
+        <div class="grid grid-cols-2 max-w-lg gap-y-3.5 gap-x-8 text-[15px] sm:text-[16px]">
+          <div>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 text-gray-900 hover:text-blue-600 transition-colors">GitHub</a>
+          </div>
+          <div>
+            <a href="mailto:25520624@gm.uit.edu.vn" class="underline underline-offset-4 text-gray-900 hover:text-blue-600 transition-colors">Email</a>
+          </div>
+          <div>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 text-gray-900 hover:text-blue-600 transition-colors">Instagram</a>
+          </div>
+          <div>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 text-gray-900 hover:text-blue-600 transition-colors">Google Scholar</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Links Section -->
+      <section class="mt-14 pt-8 border-t border-gray-100 max-w-3xl">
+        <div class="flex flex-wrap items-center gap-y-3 gap-x-6 text-sm text-gray-600">
+          <a href="writing.html" class="inline-flex items-center text-blue-600 hover:underline font-medium">
+            Read notes & articles →
+          </a>
+          <span class="text-gray-300">•</span>
+          <a href="projects.html" class="inline-flex items-center text-blue-600 hover:underline font-medium">
+            View engineering projects →
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 sm:px-8 py-10 mt-12 text-xs text-gray-500 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div>
+        © 2026 Harry Hoang • University of Information Technology (UIT)
+      </div>
+      <div class="flex items-center space-x-5">
+        <a href="writing.html" class="hover:text-gray-900 transition-colors">Writing</a>
+        <a href="projects.html" class="hover:text-gray-900 transition-colors">Work & Projects</a>
+        <a href="mailto:25520624@gm.uit.edu.vn" class="hover:text-gray-900 transition-colors">Contact</a>
+      </div>
+    </footer>
+
+  </body>
+</html>

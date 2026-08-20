@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writing - Harry Hoang</title>
+    <meta name="description" content="Course study guides, research notes, and conceptual walkthroughs bridging theory and intuition." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['Merriweather', 'Georgia', 'serif'],
+              sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #FFFFFF;
+        color: #111827;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+    
+    <!-- ========================================================================= -->
+    <!-- TOP NAVIGATION BAR (Left-aligned: Home | Writing | Work & Projects)       -->
+    <!-- ========================================================================= -->
+    <header class="w-full max-w-4xl mx-auto px-6 sm:px-8 pt-8 sm:pt-12 pb-6">
+      <nav class="flex items-center space-x-6 sm:space-x-8 text-[15px] font-sans">
+        <a id="nav-home" href="index.html" class="text-gray-600 hover:text-gray-950 transition-colors pb-0.5">Home</a>
+        <!-- Active Tab (Writing) -->
+        <a id="nav-writing" href="writing.html" class="font-medium text-gray-950 border-b-2 border-gray-950 pb-0.5 transition-colors">Writing</a>
+        <a id="nav-projects" href="projects.html" class="text-gray-600 hover:text-gray-950 transition-colors pb-0.5">Work & Projects</a>
+      </nav>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- MAIN CONTENT AREA                                                         -->
+    <!-- ========================================================================= -->
+    <main class="flex-1 w-full max-w-4xl mx-auto px-6 sm:px-8 py-6 sm:py-8">
+      
+      <!-- Primary Page Title -->
+      <h1 class="font-serif font-bold text-4xl sm:text-5xl text-gray-950 tracking-tight mb-4">
+        Writing
+      </h1>
+
+      <p class="text-gray-600 text-[16px] leading-relaxed mb-10 max-w-2xl">
+        Course study guides, research notes, and conceptual walkthroughs bridging theory and intuition. Select a course below to explore its lecture notes and articles.
+      </p>
+
+      <!-- ========================================================================= -->
+      <!-- COURSE CARDS 2-COLUMN GRID                                                -->
+      <!-- ========================================================================= -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        
+        <!-- Course Card 1: IT002 Data Structures & Algorithms -->
+        <a href="course-ds.html" class="group block p-6 sm:p-7 border border-gray-200 rounded-md bg-white hover:border-gray-400 transition-all shadow-xs hover:shadow-sm">
+          <div class="flex items-center justify-between text-xs font-mono text-blue-600 mb-2 font-medium">
+            <span>IT002 • CORE SUBJECT</span>
+            <span class="text-gray-400 group-hover:text-blue-600 transition-colors">View Notes →</span>
+          </div>
+          <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 group-hover:text-blue-600 transition-colors leading-snug">
+            IT002: Data Structures & Algorithms
+          </h2>
+          <p class="text-gray-600 text-[14.5px] sm:text-[15px] leading-relaxed mt-2.5">
+            MIT 6.006 curriculum notes, sequence interfaces, asymptotic bounds, binary search trees, and dynamic programming.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-sans">
+            <span>Lecture Notes & Synthesized Articles</span>
+            <span>2026</span>
+          </div>
+        </a>
+
+        <!-- Course Card 2: CE118 Digital Logic Design -->
+        <a href="course-ds.html" class="group block p-6 sm:p-7 border border-gray-200 rounded-md bg-white hover:border-gray-400 transition-all shadow-xs hover:shadow-sm">
+          <div class="flex items-center justify-between text-xs font-mono text-emerald-700 mb-2 font-medium">
+            <span>CE118 • HARDWARE CORE</span>
+            <span class="text-gray-400 group-hover:text-emerald-700 transition-colors">View Notes →</span>
+          </div>
+          <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 group-hover:text-blue-600 transition-colors leading-snug">
+            CE118: Digital Logic Design
+          </h2>
+          <p class="text-gray-600 text-[14.5px] sm:text-[15px] leading-relaxed mt-2.5">
+            Flip-flop triggering mechanisms, synchronous sequential circuits, two’s complement arithmetic, and finite state machines.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-sans">
+            <span>Circuit Notes & Diagrams</span>
+            <span>2026</span>
+          </div>
+        </a>
+
+        <!-- Course Card 3: CE213 Computer Architecture -->
+        <a href="course-ds.html" class="group block p-6 sm:p-7 border border-gray-200 rounded-md bg-white hover:border-gray-400 transition-all shadow-xs hover:shadow-sm">
+          <div class="flex items-center justify-between text-xs font-mono text-purple-700 mb-2 font-medium">
+            <span>CE213 • ARCHITECTURE</span>
+            <span class="text-gray-400 group-hover:text-purple-700 transition-colors">View Notes →</span>
+          </div>
+          <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 group-hover:text-blue-600 transition-colors leading-snug">
+            CE213: Computer Architecture & Organization
+          </h2>
+          <p class="text-gray-600 text-[14.5px] sm:text-[15px] leading-relaxed mt-2.5">
+            RISC-V 5-stage pipeline microarchitecture, hazard resolution, forwarding networks, and cache hierarchy.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-sans">
+            <span>Microarchitecture Notes</span>
+            <span>2026</span>
+          </div>
+        </a>
+
+        <!-- Course Card 4: Deep Learning Hardware -->
+        <a href="course-ds.html" class="group block p-6 sm:p-7 border border-gray-200 rounded-md bg-white hover:border-gray-400 transition-all shadow-xs hover:shadow-sm">
+          <div class="flex items-center justify-between text-xs font-mono text-amber-700 mb-2 font-medium">
+            <span>AI-HW • RESEARCH TOPIC</span>
+            <span class="text-gray-400 group-hover:text-amber-700 transition-colors">View Notes →</span>
+          </div>
+          <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 group-hover:text-blue-600 transition-colors leading-snug">
+            Special Topic: Deep Learning Hardware Acceleration
+          </h2>
+          <p class="text-gray-600 text-[14.5px] sm:text-[15px] leading-relaxed mt-2.5">
+            1.58-bit ternary quantized weights (BitNet), systolic array dataflows, quantization techniques, and FPGA accelerator architectures.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-sans">
+            <span>Research Surveys</span>
+            <span>2026</span>
+          </div>
+        </a>
+
+        <!-- ================================================================= -->
+        <!-- TO ADD A NEW COURSE: COPY THIS BLOCK AND UPDATE DETAILS           -->
+        <!-- ================================================================= -->
+        <!--
+        <a href="course-new.html" class="group block p-6 sm:p-7 border border-gray-200 rounded-md bg-white hover:border-gray-400 transition-all shadow-xs hover:shadow-sm">
+          <div class="flex items-center justify-between text-xs font-mono text-blue-600 mb-2 font-medium">
+            <span>COURSE_CODE • CATEGORY</span>
+            <span class="text-gray-400 group-hover:text-blue-600 transition-colors">View Notes →</span>
+          </div>
+          <h2 class="font-serif text-xl sm:text-[22px] font-bold text-gray-950 group-hover:text-blue-600 transition-colors leading-snug">
+            COURSE_NAME
+          </h2>
+          <p class="text-gray-600 text-[14.5px] sm:text-[15px] leading-relaxed mt-2.5">
+            Short course summary and key concepts covered in the lecture notes.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-sans">
+            <span>Course Materials</span>
+            <span>2026</span>
+          </div>
+        </a>
+        -->
+
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 sm:px-8 py-10 mt-16 text-xs text-gray-500 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div>
+        © 2026 Harry Hoang • University of Information Technology (UIT)
+      </div>
+      <div class="flex items-center space-x-5">
+        <a href="index.html" class="hover:text-gray-900 transition-colors">Home</a>
+        <a href="writing.html" class="hover:text-gray-900 transition-colors">Writing</a>
+        <a href="projects.html" class="hover:text-gray-900 transition-colors">Work & Projects</a>
+      </div>
+    </footer>
+
+  </body>
+</html>

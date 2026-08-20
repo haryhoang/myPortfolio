@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 2: Data Structures - Harry Hoang</title>
+    <meta name="description" content="MIT 6.006 Lecture 2: Data Structures course notes covering Sequence and Set interfaces, static and dynamic arrays, and memory representations." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['Merriweather', 'Georgia', 'serif'],
+              sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #FFFFFF;
+        color: #111827;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+    
+    <!-- ========================================================================= -->
+    <!-- TOP NAVIGATION BAR (Left-aligned: Home | Writing | Work & Projects)       -->
+    <!-- ========================================================================= -->
+    <header class="w-full max-w-4xl mx-auto px-6 sm:px-8 pt-8 sm:pt-12 pb-6">
+      <nav class="flex items-center space-x-6 sm:space-x-8 text-[15px] font-sans">
+        <a id="nav-home" href="index.html" class="text-gray-600 hover:text-gray-950 transition-colors pb-0.5">Home</a>
+        <!-- Active Tab (Writing) -->
+        <a id="nav-writing" href="writing.html" class="font-medium text-gray-950 border-b-2 border-gray-950 pb-0.5 transition-colors">Writing</a>
+        <a id="nav-projects" href="projects.html" class="text-gray-600 hover:text-gray-950 transition-colors pb-0.5">Work & Projects</a>
+      </nav>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- MAIN CONTENT AREA (MIT OCW COURSEWARE LAYOUT)                             -->
+    <!-- ========================================================================= -->
+    <main class="flex-1 w-full max-w-4xl mx-auto px-6 sm:px-8 py-4 sm:py-6">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="flex items-center space-x-2 text-xs sm:text-sm font-sans text-gray-500 mb-4">
+        <a href="writing.html" class="hover:text-gray-950 transition-colors">Writing</a>
+        <span>/</span>
+        <a href="course-ds.html" class="hover:text-gray-950 transition-colors">IT002: Data Structures</a>
+        <span>/</span>
+        <span class="text-gray-900 font-medium">Lecture 2</span>
+      </nav>
+
+      <!-- Category Label -->
+      <div class="text-sm font-sans text-gray-600 mb-1">
+        Lecture Notes
+      </div>
+
+      <!-- Main Title (MIT Courseware Style) -->
+      <h1 class="font-serif text-3xl sm:text-[38px] font-bold text-gray-950 tracking-tight leading-tight">
+        Lecture 2: Data Structures
+      </h1>
+
+      <!-- Horizontal Divider -->
+      <hr class="border-t border-gray-300 my-4" />
+
+      <!-- Resource Type Label -->
+      <div class="text-[15px] font-bold text-gray-900 mb-6 flex items-center">
+        Resource Type: <span class="font-normal text-gray-700 ml-4">Lecture Notes</span>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- MIT-STYLE PDF DOWNLOAD BOX                                            -->
+      <!-- ===================================================================== -->
+      <div class="border border-gray-300 rounded-md p-4 sm:p-5 bg-white flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 shadow-xs my-6">
+        
+        <!-- Left: Red PDF Icon Badge & File Metadata -->
+        <div class="flex items-center space-x-4">
+          <div class="w-11 h-13 flex-shrink-0 flex flex-col items-center justify-between border border-red-200 bg-red-50 rounded py-1 px-1.5 shadow-xs">
+            <span class="text-[9px] font-bold text-red-600 tracking-wider">PDF</span>
+            <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+            <span class="text-[8px] font-medium text-gray-500">217 kB</span>
+          </div>
+          <div>
+            <div class="text-base font-semibold text-gray-950">
+              Lecture 2: Data Structures
+            </div>
+            <div class="text-xs text-gray-500 mt-0.5">
+              PDF Document • 217 kB • MIT 6.006 Introduction to Algorithms
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Prominent Blue Download Button -->
+        <a 
+          id="btn-download-pdf"
+          href="assets/pdf/lecture02.pdf" 
+          download="lecture02-data-structures.pdf" 
+          class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2.5 rounded text-[14.5px] transition-all shadow-xs active:scale-[0.98] whitespace-nowrap"
+        >
+          Download File
+        </a>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- FULL EMBEDDED PDF VIEWER CONTAINER (700px height)                      -->
+      <!-- ===================================================================== -->
+      <section class="mt-8 border border-gray-300 rounded-lg overflow-hidden bg-white shadow-sm">
+        <iframe 
+          src="assets/pdf/lecture02.pdf#view=FitH" 
+          title="Lecture 2: Data Structures PDF Viewer"
+          class="w-full h-[700px] border rounded-lg block bg-gray-100"
+        >
+          <!-- Fallback if browser does not embed PDF directly -->
+          <div class="p-8 text-center bg-white text-gray-800">
+            <p class="text-base mb-3">Your browser does not support inline PDF viewing or is on a mobile device.</p>
+            <a 
+              href="assets/pdf/lecture02.pdf" 
+              download="lecture02-data-structures.pdf" 
+              class="inline-flex items-center text-blue-600 font-medium hover:underline text-sm"
+            >
+              Click here to download and view the Lecture 2 PDF (217 kB) →
+            </a>
+          </div>
+        </iframe>
+      </section>
+
+      <!-- Bottom Navigation Flow -->
+      <div class="mt-10 flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-gray-100">
+        <a href="course-ds.html" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+          ← Back to IT002 Course Notes
+        </a>
+        <a href="writing.html" class="text-xs text-gray-500 hover:text-gray-800">
+          All Courses & Writings
+        </a>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 sm:px-8 py-10 mt-16 text-xs text-gray-500 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div>
+        © 2026 Harry Hoang • University of Information Technology (UIT)
+      </div>
+      <div class="flex items-center space-x-5">
+        <a href="index.html" class="hover:text-gray-900 transition-colors">Home</a>
+        <a href="writing.html" class="hover:text-gray-900 transition-colors">Writing</a>
+        <a href="projects.html" class="hover:text-gray-900 transition-colors">Work & Projects</a>
+      </div>
+    </footer>
+
+  </body>
+</html>

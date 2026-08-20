@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%" style="background-color: #fafafa; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="340" fill="url(#grid2)" />
+
+  <g transform="translate(40, 30)">
+    <!-- Header visual -->
+    <rect x="0" y="0" width="520" height="48" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="20" y="29" font-size="14" font-weight="700" fill="#1e293b">Why Computers Use Two’s Complement for Subtraction</text>
+    <text x="440" y="29" font-size="12" font-mono="true" font-weight="600" fill="#2563eb">A - B = A + (~B + 1)</text>
+    
+    <!-- Modular circle on left -->
+    <g transform="translate(90, 160)">
+      <circle cx="0" cy="0" r="70" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+      <circle cx="0" cy="0" r="4" fill="#2563eb" />
+      <!-- Radial indicators -->
+      <line x1="0" y1="-70" x2="0" y2="-60" stroke="#0f172a" stroke-width="2"/>
+      <text x="0" y="-76" font-size="10" font-weight="700" text-anchor="middle" fill="#0f172a">000 (0)</text>
+      
+      <line x1="70" y1="0" x2="60" y2="0" stroke="#0f172a" stroke-width="2"/>
+      <text x="98" y="4" font-size="10" font-weight="700" text-anchor="middle" fill="#0f172a">010 (+2)</text>
+      
+      <line x1="0" y1="70" x2="0" y2="60" stroke="#0f172a" stroke-width="2"/>
+      <text x="0" y="86" font-size="10" font-weight="700" text-anchor="middle" fill="#dc2626">100 (-4)</text>
+      
+      <line x1="-70" y1="0" x2="-60" y2="0" stroke="#0f172a" stroke-width="2"/>
+      <text x="-98" y="4" font-size="10" font-weight="700" text-anchor="middle" fill="#dc2626">110 (-2)</text>
+      
+      <path d="M 25 -45 A 55 55 0 0 1 50 20" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+      <text x="0" y="5" font-size="9" text-anchor="middle" fill="#64748b" font-style="italic">Mod 2ⁿ Ring</text>
+    </g>
+
+    <!-- Calculation box on right -->
+    <g transform="translate(250, 75)">
+      <rect x="0" y="0" width="270" height="170" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="20" y="30" font-size="12" font-weight="700" fill="#334155">Example: 7 - 5 = 2 (in 4-bit)</text>
+      
+      <text x="25" y="60" font-size="12" font-mono="true" fill="#475569">  0111  (+7)</text>
+      <text x="25" y="82" font-size="12" font-mono="true" fill="#dc2626">+ 1011  (-5 via 2's comp)</text>
+      <line x1="20" y1="92" x2="240" y2="92" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="25" y="114" font-size="12" font-mono="true" font-weight="700" fill="#16a34a">1 0010  (Discard carry = +2)</text>
+
+      <rect x="20" y="130" width="230" height="26" rx="4" fill="#eff6ff" />
+      <text x="28" y="147" font-size="10.5" fill="#1d4ed8">Single Adder Hardware Handles Both +/-</text>
+    </g>
+  </g>
+</svg>
